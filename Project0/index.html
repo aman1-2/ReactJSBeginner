@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Introduction</title>
+</head>
+<body>
+
+    <!-- This is div is created to make a root element for React web-page using the React DOM -->
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- Going to Create a new React Element. So we are creating a new React Element with the help of
+     createElement function which has three arguments in it the first and formost argument is the type of element which we are going to create,
+     as the second argument we pass an object which has key-value pairs which tells the type of properties we can to add in our element like the className etc.
+     and the third argument is optional which is children of the elements -->
+    <script>
+        const App = () => {
+            // Here we are passing the porps as empty.
+            // Now as the third argument we need to pass its child element, the child element which is going to be used for div
+            // So here are the child we are just going to create an other react element. And inside the child element we passed its child as a Text.
+
+            return React.createElement(
+                'div', 
+                {}, 
+                React.createElement('h1', {}, "Welcome to React"),
+                React.createElement('button', {}, "Click Me")
+            ); //It will not automatically render on the DOM.
+
+        }  
+
+        //How can we select an element.
+        const rootNode = document.getElementById('root');
+        const root = ReactDOM.createRoot(rootNode); //The HTML which wants to become as Root element is passed as an argument.
+
+        root.render(App()); //So we have just wrapped our element inside a function and called that function but nothing great has happened our web-page is still blank.
+    </script>
+</body>
+</html>

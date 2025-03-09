@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glimpse Of JSX</title>
+</head>
+<body>
+    
+    <div id="root"></div>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const App = () => {
+            //This is More of like a Plain JS like syntax.
+            // return React.createElement('div', {}, React.createElement('h1', {}, "Welcome to JSX Glimpse"));
+
+            return (
+                <div> 
+                    <h1>Welcome to JSX Glimpse</h1> 
+                    <button>Click Me</button>
+                </div>
+            );
+        }
+
+        const rootNode = document.getElementById('root');
+        const root = ReactDOM.createRoot(rootNode);
+
+        root.render(<App />); //Here if we even pass the <App /> element as function like this App() then to this will run.
+    </script>
+</body>
+</html>
