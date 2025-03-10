@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
@@ -43,4 +43,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // root.render(reactElement);
 
-root.render(element);
+const AppJS = () => {
+  //This is More of like a Plain JS like syntax.
+  // return React.createElement('div', {}, React.createElement('h1', {}, "Welcome to JSX Glimpse"));
+
+  return (
+      <div> 
+          <h1>Function call shown in ReactJS</h1> 
+      </div>
+  );
+}
+
+root.render(AppJS());

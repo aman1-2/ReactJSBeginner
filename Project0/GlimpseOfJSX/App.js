@@ -16,4 +16,4 @@ const App = () => {
 const rootNode = document.getElementById('root');
 const root = ReactDOM.createRoot(rootNode);
 
-root.render(<App />);
+root.render(<App />); //Here even if we pass App as function instead of component it will work absolutely fine.
