@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { Named } from './DemoNamedExport';
 import Default, { Named1 } from './DemoExport';
 import Alias from './DemoDefaultExport';
+import FunctionComponent from './FunctionComponentPureReact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,5 +13,6 @@ root.render(
       <Default />
       <Named1 />
       <Alias />
+      <FunctionComponent />
    </React.StrictMode>
 );
